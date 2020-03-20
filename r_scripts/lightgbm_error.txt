@@ -1,0 +1,63 @@
+lgbdl::lgb.dl(commit = "master",
+              compiler = "vs", # Remove this for MinGW + GPU installation
+              repo = "https://github.com/Microsoft/LightGBM", 
+              cores = 4,
+              use_gpu = TRUE)
+Cloning into 'LightGBM'...
+Submodule 'include/boost/compute' (https://github.com/boostorg/compute) registered for path 'compute'
+Cloning into '/tmp/RtmpY75PD5/LightGBM/compute'...
+Submodule path 'compute': checked out '36c89134d4013b2e5e45bc55656a18bd6141995a'
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+Installing package into ‘/home/cdsw/R’
+(as ‘lib’ is unspecified)
+* installing *source* package ‘lightgbm’ ...
+** libs
+installing via 'install.libs.R' to /home/cdsw/R/lightgbm
+-- The C compiler identification is GNU 7.4.0
+-- The CXX compiler identification is GNU 7.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+-- Looking for CL_VERSION_2_2
+-- Looking for CL_VERSION_2_2 - not found
+-- Looking for CL_VERSION_2_1
+-- Looking for CL_VERSION_2_1 - not found
+-- Looking for CL_VERSION_2_0
+-- Looking for CL_VERSION_2_0 - not found
+-- Looking for CL_VERSION_1_2
+-- Looking for CL_VERSION_1_2 - not found
+-- Looking for CL_VERSION_1_1
+-- Looking for CL_VERSION_1_1 - not found
+-- Looking for CL_VERSION_1_0
+-- Looking for CL_VERSION_1_0 - not found
+CMake Error at /usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake:137 (message):
+  Could NOT find OpenCL (missing: OpenCL_LIBRARY OpenCL_INCLUDE_DIR)
+Call Stack (most recent call first):
+  /usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake:378 (_FPHSA_FAILURE_MESSAGE)
+  /usr/share/cmake-3.10/Modules/FindOpenCL.cmake:132 (find_package_handle_standard_args)
+  CMakeLists.txt:109 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/tmp/RtmpY75PD5/LightGBM/lightgbm_r/src/build/CMakeFiles/CMakeOutput.log".
+See also "/tmp/RtmpY75PD5/LightGBM/lightgbm_r/src/build/CMakeFiles/CMakeError.log".
+make: *** No rule to make target '_lightgbm'.  Stop.
+Error in eval(ei, envir) : Cannot find lib_lightgbm.so
+* removing ‘/home/cdsw/R/lightgbm’
+[1] FALSE
+Warning message:
+In install.packages(file.path(lgb_git_dir, "LightGBM", "lightgbm_r"),  :
+  installation of package ‘/tmp/RtmpY75PD5/LightGBM/lightgbm_r’ had non-zero exit status
